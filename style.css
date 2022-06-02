@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  height: 800px;
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header {
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: baseline;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+.link {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #777;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.slide-container {
+  background-color: whitesmoke;
+  height: 500px;
+  width: 500px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+img {
+  background-color: whitesmoke;
+  height: 400px;
+  width: 400px;
+  padding: 50px;
+  position: absolute;
+}
