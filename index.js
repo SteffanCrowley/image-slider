@@ -3,6 +3,7 @@ const buttons = document.querySelectorAll("button");
 const img = [];
 let time = 5000;
 let i = 1;
+let timeoutID;
 
 img[1] = "./Pictures/pizza2.jpg";
 img[2] = "./Pictures/pizza3.jpg";
@@ -28,7 +29,7 @@ function changeImg(direction) {
   document.slide.src = img[i];
   console.log(direction);
   console.log(i);
-  setTimeout("changeImg('NEXT')", time);
+  timeoutID = setTimeout("changeImg('NEXT')", time);
 }
 
 window.onload = changeImg("NEXT");
@@ -37,6 +38,6 @@ buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
     const offset = e.target.innerHTML;
     changeImg(offset);
-    setTimeout("changeImg('NEXT')", time);
+    clearTimeout(timeoutID);
   });
 });
