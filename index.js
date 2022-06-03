@@ -10,7 +10,7 @@ img[2] = "./Pictures/pizza3.jpg";
 img[3] = "./Pictures/pizza4.webp";
 img[4] = "./Pictures/pizza5.jpg";
 
-function changeImg(direction) {
+function changeImg(direction, slide) {
   console.log("test");
 
   if (direction == "NEXT") {
@@ -25,6 +25,9 @@ function changeImg(direction) {
     } else {
       i = 4;
     }
+  } else if (direction == "PICK") {
+    clearTimeout(timeoutID);
+    i = slide;
   }
   document.slide.src = img[i];
   console.log(direction);
