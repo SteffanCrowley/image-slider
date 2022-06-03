@@ -2,6 +2,10 @@ body {
   margin: 0;
   height: 800px;
   background-color: rgb(230, 230, 230);
+}
+
+.main {
+  height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,10 +44,6 @@ img {
   width: 400px;
   padding: 50px;
   position: absolute;
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
-}
-
-img.active {
   opacity: 1;
+  transition: opacity 150ms ease-in-out;
 }

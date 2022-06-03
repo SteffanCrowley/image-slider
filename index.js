@@ -1,12 +1,29 @@
-const left = document.querySelector(".left");
-const img1 = document.querySelector("#img1");
-const img2 = document.querySelector("#img2");
-const img3 = document.querySelector("#img3");
-const img4 = document.querySelector("#img4");
+const buttons = document.querySelectorAll("button");
 
-left.addEventListener("click", (e) => {
-  for (let i = 1; i < 3; i++) {
-    document.querySelector(`#img${i}`).classList.toggle("active");
-    console.log("test");
+const img = [];
+let time = 5000;
+let i = 1;
+
+img[1] = "./Pictures/pizza2.jpg";
+img[2] = "./Pictures/pizza3.jpg";
+img[3] = "./Pictures/pizza4.webp";
+img[4] = "./Pictures/pizza5.jpg";
+
+function changeImg() {
+  document.slide.src = img[i];
+
+  if (i < img.length - 1) {
+    i++;
+  } else {
+    i = 1;
   }
+  setTimeout("changeImg()", time);
+}
+
+window.onload = changeImg();
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const offset = e.target.innerHTML === "NEXT" ? 1 : -1;
+  });
 });
